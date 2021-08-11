@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All DIgital Clocks</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            background: #d3e1e0b8;
+            background-blend-mode: darken;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .holder {
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            padding: 10px;
+            justify-items: center;
+            align-items: center;
+            border: 2px solid rgba(170, 177, 184, 0.796);
+            border-radius: 10px;
+        }
+        
+        iframe {
+            height: 300px;
+            width: 300px;
+            border: 2px solid;
+            border-radius: 15px;
+            margin: auto;
+            overflow: visible;
+        }
+        
+        .btns {
+            display: flex;
+            flex-direction: row;
+        }
+        
+        button {
+            padding: 10px;
+            margin: 5px;
+            background: #b5b3c7d7;
+            border: 0;
+            border-radius: 10px;
+            font-size: 20px;
+            color: rgba(0, 0, 0, 0.7);
+            cursor: pointer;
+        }
+        h2{
+            font-family: Arial, Helvetica, sans-serif;
+            color:rgb(87, 85, 85);
+        }
+        
+        @media screen and (max-width: 1000px) {
+            body {
+                grid-template-columns: auto auto;
+            }
+        }
+        
+        @media screen and (max-width: 670px) {
+            body {
+                grid-template-columns: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="holder">
+        <iframe src="./dig-1.html"></iframe>
+        <h2>Simple Clock</h2>
+
+        <div class="btns">
+            <button>View Code</button>
+            <button>Download</button>
+        </div>
+
+    </div>
+    <div class="holder">
+        <iframe src="./dig-2.html"></iframe>
+        <h2>Dailer Clock</h2>
+
+        <div class="btns">
+            <button>View Code</button>
+            <button>Download</button>
+        </div>
+
+    </div>
+    <div class="holder">
+        <iframe src="./dig-3.html"></iframe>
+        <h2>Dailer Clock-2</h2>
+
+        <div class="btns">
+            <button>View Code</button>
+            <button>Download</button>
+
+        </div>
+
+    </div>
+
+    <div class="holder">
+        <iframe src="./dig-4.html"></iframe>
+        <h2>Open Clock</h2>
+
+        <div class="btns">
+            <button>View Code</button>
+            <button>Download</button>
+        </div>
+
+    </div>
+    <div class="holder">
+        <iframe src="./dig-5.html"></iframe>
+        <h2>Blinking Clock</h2>
+
+        <div class="btns">
+            <button>View Code</button>
+            <button>Download</button>
+        </div>
+    </div>
+    <div class="holder">
+        <iframe src="./dig-6.html"></iframe>
+        <h2>Blinking Clock</h2>
+
+        <div class="btns">
+            <button>View Code</button>
+            <button>Download</button>
+        </div>
+
+    </div>
+
+
+    <script>
+        let frame = document.querySelector('iframe')
+        frame.addEventListener('click', evt => {
+            console.log(evt.target)
+        })
+    </script>
+</body>
+
+</html>

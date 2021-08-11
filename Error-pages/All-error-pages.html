@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Error Pages</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: auto auto;
+            background: #d3e1e0b8;
+
+        }
+        
+        div {
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            padding: 10px;
+            justify-items: center;
+            align-items: center;
+        }
+        
+        iframe {
+            height: 550px;
+            width: 500px;
+            border: 0;
+            border-radius: 15px;
+            margin: auto;
+            overflow: visible;
+        }
+        
+        .btns {
+            display: flex;
+            flex-direction: row;
+        }
+        
+        button {
+            padding: 10px;
+            margin: 5px;
+            background: #b5b3c7d7;
+            border: 0;
+            border-radius: 10px;
+            font-size: 20px;
+            color: rgba(0, 0, 0, 0.7);
+            cursor: pointer;
+        }
+        h2{
+            font-family: Arial, Helvetica, sans-serif;
+            color:rgb(87, 85, 85);
+        }
+        
+        @media screen and (max-width: 1000px) {
+            body {
+                grid-template-columns: auto 
+            }
+        }
+        
+      
+    </style>
+</head>
+
+<body>
+    <div>
+        <iframe src="./page-not-found-1.html"></iframe>
+        <h2>Sad Page Not Found Template</h2>
+
+        <div class="btns">
+            <button>View Code</button>
+            <button>Download</button>
+        </div>
+    </div>
+    <div>
+        <iframe src="./page-not-found-2.html"></iframe>
+        <h2>Sad Page Not Found Template</h2>
+
+        <div class="btns">
+            <button>View Code</button>
+            <button>Download</button>
+        </div>
+    </div>
+    <div>
+        <iframe src="./page-not-found-3.html"></iframe>
+        <h2>Sad Page Not Found Template</h2>
+
+        <div class="btns">
+            <button>View Code</button>
+            <button>Download</button>
+        </div>
+    </div>
+
+    <div>
+        <iframe src="./page-not-found-4.html"></iframe>
+        <h2>Sad Page Not Found Template</h2>
+
+        <div class="btns">
+            <button>View Code</button>
+            <button>Download</button>
+        </div>
+    </div>
+    <div>
+        <iframe src="./page-not-found-5.html"></iframe>
+        <h2>Sad Page Not Found Template</h2>
+
+        <div class="btns">
+            <button>View Code</button>
+            <button>Download</button>
+        </div>
+    </div>
+    <script>
+        let frame = document.querySelector('iframe')
+        frame.addEventListener('click', evt => {
+            console.log(evt.target)
+        })
+    </script>
+</body>
+
+</html>

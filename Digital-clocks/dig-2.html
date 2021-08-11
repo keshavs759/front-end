@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>digital-clock</title>
+    <style>
+              html{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            height: 100vh;
+            background: url('./background.jpg') #0f0e0e;
+            background-blend-mode: darken;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+      @font-face {
+        font-family: digital;
+        src: url('/digital-clock/DS-DIGI.TTF') format('truetype');
+      }
+
+      .clock-outer-body {
+        background: black;
+        border: 2px solid black;
+        border-radius: 35px;
+        width: 270px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 70px;
+        margin: auto;
+      }
+      .time-wraper {
+        background: linear-gradient(#eee4e4, #53534c, #f6f9f6);
+        border: 2px solid black;
+        border-radius: 35px;
+        width: 80px;
+        height: 60px;
+        display: flex;
+        justify-items: center;
+        margin:auto;
+      }
+      .display-time {
+        /* width: 100%; */
+        color: black;
+        text-align: center;
+        font-family: digital;
+        font-size: 60px;
+        font-weight: 900;
+        margin: auto;
+      }
+      p {
+        color: #b7aeae;;
+        text-align: center;
+        font-family: digital;
+        font-size: 60px;
+        font-weight: 900;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body onload="myDate()">
+    <div class="clock-outer-body">
+      <div class="time-wraper">
+        <p id="hour" class="display-time"></p>
+      </div>
+      <p>:</p>
+      <div class="time-wraper">
+        <p id="min" class="display-time"></p>
+    </div>
+    <p>:</p>
+      <div class="time-wraper">
+        <p id="sec" class="display-time"></p>
+    </div>
+    </div>
+    <script>
+      let hour = document.querySelector('#hour')
+      let min = document.querySelector('#min')
+      let sec = document.querySelector('#sec')
+
+      const myDate = () => {
+        let date = new Date()
+        let hours = date.getHours()
+        let minutes = date.getMinutes()
+        let seconds = date.getSeconds()
+        hour.innerHTML = hours
+        min.innerHTML = minutes
+        sec.innerHTML = seconds
+      }
+      setInterval(myDate, 1000)
+    </script>
+  </body>
+</html>

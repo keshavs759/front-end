@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create an Account - shopMe</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/signup-style.css">
+   </head>
+
+<body>
+    <div class="nav-bar">
+        <a href="./index.html"><img src="./img/logo.png" alt="" class="logo"></a>
+        <div class="search">
+            <input type="text" name="search" id="search-in" placeholder="Search in shopMe">
+            <span class="material-icons">search</span>
+        </div>
+        <div><a href="./login.html"><span id='login' class="material-icons tooltip">login </span></a>
+            <p class="tooltiptext">login</p>
+        </div>
+        <div><span id='cart' class="material-icons tooltip">shopping_cart</span>
+            <p class="tooltiptext">Shopping Cart</p>
+        </div>
+    </div>
+    <div class="body-content">
+        <div class="container">
+
+            <h2>Sign Up</h2>
+            <div class="login-form">
+                <form action="">
+                    <div class="form-item">
+                        <input type="text" name="userName" id="userName" placeholder="First Name">
+                        <input type="text" name="userName" id="userName" placeholder="Last Name">
+
+                    </div>
+                    <div class="form-item-email">
+                        <input type="email" name="email" id="email" placeholder="Email">
+                    </div>
+                    <div class="form-item-email">
+                        <input type="tel" name="tel" id="tel" placeholder="Please enter your phone number">
+                    </div>
+                    <div class="form-item-DOB">
+                        <label for="DOB">DOB:</label>
+                        <input type="date" name="DOB" id="DOB" >
+                    </div>
+                    <div class="form-item-gender">
+                        <label for="DOB">Gender:</label>
+                        Male<input type="radio" name="gender" id="male" value="male" >
+                        Female<input type="radio" name="gender" id="female" value="female" >
+
+                    </div>
+                    <div class="form-item-password">
+                        <input type="password" name="passWord" id="password" placeholder="Password">
+                        <input type="password" name="passWord" id="confirmPassword" placeholder="Confirm Password">
+
+                    </div>
+                    <div class="remember-box">
+                        <input type="checkbox" name="remember" id="remember">
+                        <p>I accept the Terms of Use & Privacy Policy</p>
+                    </div>
+                    <div class="form-btns">
+
+                        <button class="signup" type="submit" disabled>Sign Up</button>
+                        <div class="options">
+                            Already have an account?<a href="./login.html">Login here</a>
+                        </div>
+
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="pre-footer-wrapper">
+        <div class="pre-footer">
+            <div class="customer-care">
+                <h2>Customer Care</h2>
+                <a href="#">Help Center</a>
+                <a href="#">How to Buy</a>
+                <a href="#">Offers & Sales</a>
+                <a href="#">Returns & Refunds</a>
+                <a href="./contact.html">Contact Us</a>
+            </div>
+            <div class="pages">
+                <h2>ShopMe</h2>
+                <a href="#">About</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Digital Payments</a>
+                <a href="#">Blogs</a>
+            </div>
+            <img src="./img/logo.png" alt="">
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Copyright &copy; www.shopme.com 2021</p>
+    </div>
+ <script src="./js/signup-script.js"></script>
+
+</body>
+
+</html>

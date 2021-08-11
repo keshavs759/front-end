@@ -1,0 +1,21 @@
+.zone {
+    padding: 50px;
+    max-width:80%;
+    margin:0 auto;
+  }
+  
+  p {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 100;
+  }
+  
+  
+  #s-rectBox { 
+      position: absolute;
+      z-index: 1090;
+      border:2px dashed #cbd3e3;
+      border-radius:0;
+  }
+  
