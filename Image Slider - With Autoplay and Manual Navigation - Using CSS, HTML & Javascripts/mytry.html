@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .slider-wrapper {
+            width: 800px;
+            height: 500px;
+            overflow: hidden;
+        }
+        
+        .slides {
+            display: flex;
+            width: 500%;
+            height: 500px;
+        }
+        
+        .slide {
+            transition: 2s;
+            width: 20%;
+        }
+        
+        .slide img {
+            width: 800px;
+            height: 500px;
+        }
+        
+        .slides input {
+            display: none;
+        }
+        /* Manual navigation */
+        
+        .manual-navigation {
+            position: absolute;
+  width: 800px;
+  margin-top: -48px;
+  display: flex;
+  justify-content: center;
+        }
+        
+        .manual-btn {
+            border: 2px solid #40D3DC;
+            padding: 5px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 1s;
+        }
+        
+        .manual-btn:not(:last-child) {
+            margin-right: 40px;
+        }
+        
+        .manual-btn:hover {
+            background-color: #40D3DC;
+        }
+        
+        #radio1:checked~.first {
+            margin-left: 0;
+        }
+        
+        #radio2:checked~.first {
+            margin-left: -20%;
+        }
+        
+        #radio3:checked~.first {
+            margin-left: -40%;
+        }
+        
+        #radio4:checked~.first {
+            margin-left: -60%;
+        }
+        
+        .auto-navigation {
+            position: absolute;
+            width: 800px;
+            top: 460px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .auto-navigation div {
+            border: 2px solid #40D3DC;
+            padding: 5px;
+            border-radius: 10px;
+            transition: 1s;
+        }
+        
+        .auto-navigation div:not(:last-child) {
+            margin-right: 40px;
+        }
+        
+        #radio1:checked~.auto-navigation .autobtn-1 {
+            background: #40D3DC;
+        }
+        
+        #radio2:checked~.auto-navigation .autobtn-2 {
+            background: #40D3DC;
+        }
+        
+        #radio3:checked~.auto-navigation .autobtn-3 {
+            background: #40D3DC;
+        }
+        
+        #radio4:checked~.auto-navigation .autobtn-4 {
+            background: #40D3DC;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider-wrapper">
+        <div class="slides">
+            <input type="radio" name="radio" id="radio1">
+            <input type="radio" name="radio" id="radio2">
+            <input type="radio" name="radio" id="radio3">
+            <input type="radio" name="radio" id="radio4">
+
+
+            <div class="slide first">
+                <img src="/1.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="/2.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="/3.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="/4.jpg" alt="">
+            </div>
+            <div class="auto-navigation">
+                <div class="autobtn-1"></div>
+                <div class="autobtn-2"></div>
+                <div class="autobtn-3"></div>
+                <div class="autobtn-4"></div>
+
+            </div>
+
+        </div>
+
+        <!-- Manual Navigation -->
+        <div class="manual-navigation">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+
+        </div>
+    </div>
+    <script type="text/javascript">
+        var counter = 1;
+        setInterval(function() {
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+            if (counter > 4) {
+                counter = 1;
+            }
+        }, 5000);
+    </script>
+</body>
+
+</html>
