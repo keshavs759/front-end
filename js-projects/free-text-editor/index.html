@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/667417c7ec.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+<body>
+        <h1 class="title">Free Text Editor</h1>
+        <div class="text-editor-main">
+            <div class="menu">
+                <button class="btns" data-command="bold"><i class ="fas fa-bold"></i></button>
+                <button class="btns" data-command="italic"><i class ="fas fa-italic"></i></button>
+                <button class="btns" data-command="underline"><i class ="fas fa-underline"></i></button>
+                <button class="btns" data-command="copy"><i class ="far fa-copy"></i></button>
+                <button class="btns" data-command="cut"><i class ="fas fa-cut"></i></button>
+                <button class="btns" data-command="removeFormat"><i class ="fas fa-broom"></i></button>
+                <button class="btns" data-command="formatBlock" data-block="H1">H1</button>
+                <button class="btns" data-command="formatBlock" data-block="H2">H2</button>
+                <button class="btns" data-command="formatBlock" data-block="H2">H3</button>
+                <button class="btns" data-command="formatBlock" data-block="p">p</button>
+                <button class="btns" data-command="superscript"><i class ="fas fa-superscript"></i></button>
+                <button class="btns" data-command="subscript"><i class ="fas fa-subscript"></i></button>
+                <button class="btns" data-command="insertUnorderedList"><i class ="fas fa-list-ul"></i></button>
+                <button class="btns" data-command="insertOrderedList"><i class ="fas fa-list-ol"></i></button>
+                <button class="btns" data-command="justifyLeft"><i class ="fas fa-align-left"></i></button>
+                <button class="btns" data-command="justifyCenter"><i class ="fas fa-align-center"></i></button>
+                <button class="btns" data-command="justifyRight"><i class ="fas fa-align-right"></i></button>
+                <button class="btns" data-command="justifyFull"><i class ="fas fa-align-justify"></i></button>
+                <button class="btns" data-command="createLink"><i class ="fas fa-link"></i></button>
+                <button class="btns" data-command="formatBlock" data-block="blockquote"><i class ="fas fa-quote-right"></i></button>
+                <button class="btns" data-command="formatBlock" data-block="pre"><i class ="fas fa-code"></i></button>
+                <button class="btns" data-command="undo"><i class ="fas fa-undo"></i></button>
+                <button class="btns" data-command="redo"><i class ="fas fa-redo"></i></button>
+
+               
+            </div>
+         <div class="content" contenteditable="true" ></div>
+         <button class="btns" id="copy-content"><i class="fas fa-file-code"></i></button>
+    
+        </div>
+   
+
+    <script src="./js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker</title>
+    <style>
+        .unit {
+            display: flex;
+        }
+        
+        p,
+        label {
+            font: 1rem 'Fira Sans', sans-serif;
+        }
+        
+        input {
+            margin: .4rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="unit">
+        <p>Choose your colors:</p>
+        <input type="color" id="color" name="color" onchange="colorValue(this.value)" value="#e66465">
+    </div>
+    <p id="hex_code">Hex Code: #e66465</p>
+
+    <script>
+        const color_val = document.querySelector("#color");
+        const hex_code = document.querySelector("#hex_code");
+
+        function colorValue(value) {
+            hex_code.textContent = ` Hex Code: ${value} `;
+            console.log(value);
+        }
+    </script>
+</body>
+
+</html>

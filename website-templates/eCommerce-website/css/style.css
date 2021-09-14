@@ -297,6 +297,9 @@
             background: #fff6f6;
             color: #444242;
         }
+        .footer a:hover{
+            color: black;
+        }
         @media screen and (max-width:1040px) {
             .categories {
                 grid-template-columns: auto auto auto auto;

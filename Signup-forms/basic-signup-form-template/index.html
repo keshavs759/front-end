@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Sign Up Form Template</title>
+    <style>
+        html {
+            background: rgba(233, 225, 225, 0.479);
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: auto;
+            width: 75vw;
+            background: #ccc7c759;
+            padding: 25px;
+        }
+        
+        .container h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(59, 55, 55);
+            font-size: 25px;
+        }
+        
+        .form-wrapper {
+            margin: auto;
+        }
+        
+        .form {
+            width: 90%;
+        }
+        
+        .form-item {
+            display: flex;
+            margin: auto;
+            align-items: center;
+            width: 80%;
+        }
+        
+        .form-item label {
+            width: 150px;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .form-item input {
+            margin: 5px 15px;
+            height: 25px;
+            width: 150px;
+            font-size: 15px;
+            border: 1px black solid;
+            border-radius: 5px;
+        }
+        
+        .genders {
+            display: flex;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 16px;
+            font-size: 18px;
+        }
+        
+        .genders input {
+            width: 25px;
+        }
+        
+        .terms-cond {
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 80%;
+            margin: auto;
+        }
+        
+        .terms-cond h3 {
+            font-size: 25px;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+        
+        .terms-cond .text {
+            height: 90%;
+            overflow-y: scroll;
+            border: 1px solid black;
+            padding: 5px;
+            font-size: 14px;
+            text-align: justify;
+            border-radius: 5px;
+            /* width: 85%; */
+        }
+        
+        .check-box {
+            display: flex;
+            margin: 0 2px;
+        }
+        
+        .check-box input {
+            margin: 0 5px;
+        }
+        
+        .signup {
+            margin: 25px;
+            background: #1e90ff;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 7px 20px;
+            border-radius: 20px;
+            color: #fbfbfb;
+            border: 0;
+            cursor: pointer;
+        }
+        .signup:hover {
+            color: #3a3636;
+
+        }
+        .signup:disabled {
+            cursor: not-allowed;
+            background: #b1b1b7;
+            color: #5b5555;
+        }
+        @media screen and (max-width: 640px) {
+            .container {
+          
+            width: 90vw;
+            padding: 10px;
+        }
+        .form-item label {
+            font-size: 14px;
+            width: 100px;
+
+        }
+        .form-item input {
+            margin: 5px 10px;
+            height: 18px;
+            width: 100px;
+            font-size: 12px;
+        }
+        .genders {
+          margin-left: 10px;
+          font-size: 15px;
+
+        }
+        
+        .genders input {
+            width: 15px;
+        }
+        .terms-cond h3 {
+            font-size: 20px;
+           
+        }
+        .terms-cond .text {
+            font-size: 13px;
+        }
+        .signup {
+            margin: 25px;
+            background: #1e90ff;
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 7px 10px;
+            border-radius: 20px;
+            color: #fbfbfb;
+            border: 0;
+            cursor: pointer;
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Sign Up From</h2>
+        <div class="form-wrapper">
+            <form action="">
+                <div class="form-item">
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" name="firstname" id="firstname" placeholder="First Name" required>
+                    <input type="text" name="lastname" id="lastname" placeholder="Last Name" required>
+                </div>
+                <div class="form-item">
+                    <label for="username">Username:</label>
+                    <input type="text" name="username" id="username" placeholder="User Name" required>
+                </div>
+                <div class="form-item">
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" id="email" placeholder="email@xyz.com" required>
+                </div>
+                <div class="form-item">
+
+                    <label for="gender">Gender:</label>
+                    <div class="genders">
+                        <p>Male</p> <input type="radio" name="gender" id="gender" value="male">
+                        <p>Female</p> <input type="radio" name="gender" id="gender" value="female">
+                        <p>Other</p> <input type="radio" name="gender" id="gender" value="other">
+                    </div>
+
+                </div>
+                <div class="form-item">
+                    <label for="address">Address:</label>
+                    <input type="text" name="address" id="address" placeholder="Full Address" required>
+                </div>
+                <div class="form-item">
+                    <label for="phonenumber">Phone Number:</label>
+                    <input type="tel" name="phonenumber" id="phonenumber" placeholder="XXX XXX XXXX" required>
+                </div>
+                <div class="terms-cond">
+                    <h3>Terms and Conditions</h3>
+                    <div class="text">
+                        <p> <strong>1.</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores earum sequi enim laborum nihil iste recusandae voluptatem consequuntur velit magnam magni voluptas eum tempora aliquid beatae, eius quia sapiente
+                            ipsam? Cum fugiat molestiae tenetur ratione dolorum, reiciendis fugit consectetur quod. Impedit explicabo recusandae doloribus voluptatum aliquid dolorem magni accusamus fugiat?</p>
+                        <p> <strong>2.</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Est sequi, beatae aut magnam sunt consequuntur itaque facilis quo aperiam rerum!</p>
+                        <p><strong>3.</strong> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab quaerat deserunt doloribus non et nihil dolorum quia voluptatum dignissimos totam quam, debitis, excepturi mollitia? Quisquam.</p>
+
+                        <p><strong>4.</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Est sequi, beatae aut magnam sunt consequuntur itaque facilis quo aperiam rerum!</p>
+                        <p><strong>5.</strong> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab quaerat deserunt doloribus non et nihil dolorum quia voluptatum dignissimos totam quam, debitis, excepturi mollitia? Quisquam.</p>
+                        <div class="check-box">
+                            <input type="checkbox" name="termscond" id="termscond" required>
+                            <p>Accept terms & condition</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="signup" type="submit" disabled>Sign Up</button>
+            </form>
+        </div>
+
+    </div>
+<script>
+    let signUp = document.querySelector('.signup')
+    let termCond = document.querySelector('#termscond')
+    termCond.addEventListener('change',()=>{
+        if(termCond.checked === true){
+        signUp.disabled = false;
+    }else if(termCond.checked ===false){
+        signUp.disabled = true;
+
+    }
+    })
+ 
+
+
+</script>
+</body>
+
+</html>

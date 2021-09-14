@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Round Blinking Digital Clock</title>
+    <style>
+        html {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            height: 100vh;
+            background: url('./background.jpg') #0f0e0e;
+            background-blend-mode: darken;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        @font-face {
+            font-family: digital;
+            src: url('/digital-clock/DS-DIGI.TTF') format('truetype');
+        }
+        
+        .clock-outer-body {
+            border: 12px solid;
+            border-color: rgb(0, 255, 8);
+            border-radius: 270px;
+            width: 270px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 270px;
+            margin: auto;
+        }
+        
+        .display-time {
+            color: rgb(0, 255, 8);
+            text-align: center;
+            font-family: digital;
+            font-size: 70px;
+            font-weight: 900;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body onload="myDate()">
+    <div class="clock-outer-body">
+        <p id="time" class="display-time"></p>
+    </div>
+    <script>
+        let time = document.querySelector('#time')
+        let border = document.querySelector('.clock-outer-body')
+
+        let colorArray = ['rgb(255,0,0)','rgb(255,255,0)','rgb(0,255,0)','rgb(0,255,255)','rgb(0,0,255)','rgb(255,0,255)']
+
+        let i = 0
+        const myDate = () => {
+            if(i===colorArray.length){
+                    i=0;
+                }
+            let date = new Date()
+            let hours = date.getHours()
+            let minutes = date.getMinutes()
+            let seconds = date.getSeconds()
+            time.innerHTML = `${hours}:${minutes}:${seconds}`
+            time.style.color = colorArray[i];
+            border.style.borderColor = colorArray[i];
+                i++
+        }
+        setInterval(myDate, 1000)
+    </script>
+</body>
+
+</html>

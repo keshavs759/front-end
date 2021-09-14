@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hand Watch Like Analog clock</title>
+    <style>
+        body {
+            padding-top: 5vh;
+        }
+        
+        #clockContainer {
+            position: relative;
+            margin: auto;
+            height: 51vw;
+            /*to make the height and width responsive*/
+            width: 40vw;
+            background: url("./clock-outline-3.png") no-repeat;
+            /*setting our background image*/
+            background-size: 100%;
+        }
+        /*  #bf8640
+ */
+        
+        #hour,
+        #minute,
+        #second {
+            position: absolute;
+            background: black;
+            border-radius: 10px;
+            transform-origin: bottom;
+            z-index: 1;
+            opacity: .9;
+        }
+        
+        #hour {
+            width: 1.8%;
+            height: 13%;
+            top: 43.55%;
+            left: 44.25%;
+        }
+        
+        #minute {
+            width: 1.6%;
+            height: 19%;
+            top: 37.75%;
+            left: 45.45%;
+        }
+        
+        #second {
+            width: 1%;
+            height: 27%;
+            top: 30%;
+            left: 45.25%;
+        }
+    </style>
+</head>
+
+<body onload="myClock()">
+    <div id="clockContainer">
+        <div id="hour"></div>
+        <div id="minute"></div>
+        <div id="second"></div>
+    </div>
+
+    </div>
+    <script>
+        function myClock() {
+            d = new Date(); //object of date()
+            hr = d.getHours();
+            min = d.getMinutes();
+            sec = d.getSeconds();
+            hr_rotation = 30 * hr + min / 2; //converting current time
+            min_rotation = 6 * min;
+            sec_rotation = 6 * sec;
+
+
+            hour.style.transform = `rotate(${hr_rotation}deg)`;
+            minute.style.transform = `rotate(${min_rotation}deg)`;
+            second.style.transform = `rotate(${sec_rotation}deg)`;
+
+        }
+        setInterval(myClock, 1000);
+    </script>
+</body>
+
+</html>
